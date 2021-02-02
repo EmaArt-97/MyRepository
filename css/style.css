@@ -1,0 +1,963 @@
+/******************** Page intégrale ********************/
+/*télécharger la police*/
+@font-face { /*logo*/
+  font-family: "Calligraphy";
+  src : url("./police/Staples Calligraphy.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src : url("./police/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "stay";
+  src : url("./police/STAY HOME.otf");
+}
+@font-face { /*police simple */
+  font-family: "Champagne";
+  src : url("./police/Champagne & Limousines.ttf");
+}
+@font-face { /*Titres Calligraphiques*/
+  font-family: "Homework";
+  src : url("./police/Homework.otf");
+}
+html { /* style du scroll*/
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body { /* corps du texte */
+  display: grid;
+  background-color: #201F1F;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 100vw;
+}
+#topButton { /*Le bouton pour revenir au début de la page*/
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #424242;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+.up{ /* Faire une flèche vers le haut*/
+  transform: rotate(-135deg);
+}
+#topButton:hover {/*Bouton au passage de la souris*/
+  background-color: #838383;
+}
+/* Sroll bar */
+::-webkit-scrollbar {/* la largeur du sroll total */
+  width: 5px; /* y scroll*/
+  height: 7px; /* x scroll*/
+  background: #424242;
+}
+::-webkit-scrollbar-track{/* le fond de la barre */
+  background: #424242;
+}
+::-webkit-scrollbar-button{/*les boutons*/
+  display: none;
+}
+::-webkit-scrollbar-thumb {/* le morceau amovible de la barre */
+  background: #0074A1;
+  padding: 4px;
+}
+::-webkit-scrollbar-thumb:hover {/* lorsqu'on click sur la barre */
+  background: #035A7C;
+}
+
+/******************** Page d'acceuil ********************/
+.WelcomImage{/*Image de la page d'accueil*/
+  height:90vh;
+  max-width:100vw;
+  vertical-align: middle;
+  background-image: url("../img/ImageAccueil.jpg");
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
+  background-size: 100%;
+  background-color: transparent;
+  background-size:cover;
+}
+.Name{/*Affichage de mon nom et du logo*/
+  padding-top: 38vh;
+}
+h1 {/*Le logo Emm'Art sur la page d'accueil*/
+  text-align: center;
+  font-family:"Calligraphy";
+  color: #201F1F;
+  font-size : 150px;
+  font-weight: 400;
+  margin: 0px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top:  50px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+h2 {/* Mon nom sur la page d'accueil*/
+  text-align: center;
+  font-family:"Verdana";
+  font-size : 20px;
+  color: #201F1F;
+  font-weight: 400;
+  margin:0px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom:  50px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.fixedheader{/* La barre du menu sur la page d'accueil*/
+  background-color: #201F1F;
+  width:100%;
+  z-index: 99;
+  transition: 0.4s;
+  position: fixed;
+  top:0;
+  white-space: nowrap;
+  padding: 10px 10px;
+}
+#biglogo{/*Le logo dans la barre du menu*/
+  font-family:"Calligraphy";
+  color: #E6E6E6;
+  font-size : 70px;
+  font-weight: 400;
+  float: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.menu { /*les liens vers endroits spécifiques de la page*/
+  float: left;
+  font-size : 25px;
+  color: #E6E6E6;
+  font-style : italic;
+	text-decoration: none;
+  text-align: center;
+  padding: 15px;
+}
+.rightheader{ /*hors catégorie d'art*/
+  float:right;
+  margin-right: 20px;
+}
+.réseaux{/*logo des réseaux sociaux*/
+  text-align: center;
+  padding-top:  20px;
+  padding-bottom: 10px;
+}
+.logo{/*logo des réseaux sociaux*/
+  width: 30px;
+  max-height: 30px;}
+
+/******************** Catégories principales ********************/
+hr{/*trait horizontal bleu*/
+  background-color : #0074A1;
+  width: 5rem;
+  height: .25rem;
+  margin-bottom: 1rem;
+  content: "";
+  border: none;
+  margin-left: 0;
+  align-items: left;
+}
+h3{/*Tritre des catégories principales */
+  text-align: left;
+  font-family:"Champagne";
+  font-size : 60px;
+  color: white;
+  font-weight: 400;
+  margin:0px;
+  padding-top: 60px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom:  10px;
+}
+h4 { /* titre des sous catégories*/
+  text-align: center;
+  font-family:"Champagne";
+  font-weight: 400;
+  font-size : 30px;
+  padding:0;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+.main{
+  max-width:100vw;
+}
+
+/******************** Sous catégories - Aquarelle  ********************/
+.aqurelleMennu button {/*pour que le menue des sous catégorie soit sur une ligne*/
+  display:inline-table;
+  background-color: inherit;
+  transition: 0.3s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+}
+.aqurelleMennu{ /*barre de menu des sous catégories Aquarelle*/
+  /*background-color: #3D3D3D;*/
+  white-space: nowrap;
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;}
+.aqurelleMennu button.active,  .aqurelleMennu button.active h4{ /* Affichage du boutton activé */
+  background-color: #fff;
+  color: black;}
+.aqurelleMennu button:hover { /* Affichage du boutton au passage de la souris */
+    color: #0074A1;}
+#contenuAnimaux,#contenuMini,#contenuBébé,#contenuDivers,#contenuCartes, #contenuTableaux{/*Contenu des sous catégories*/
+  display : none;
+  margin-left: 50px;
+  margin-right: 50px;
+  height:auto;
+  text-align: center;
+  max-width: 100vw;
+}
+#contenuAnimaux{ /*Afficher la première catégorie avant sélection*/
+  display:block;}
+.categoriesContent figure {/*pour que le contenu des sous catégorie soit sur une ligne*/
+  display:inline-table;}
+.categoriesContent{/*Pour que la taille de la sous catégorie s'adapte à son contenu */
+  height:auto;
+  position: relative;
+  max-width: 100vw;
+}
+.aquarellephotos {
+  padding: 10px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  background-color:white;
+}
+.aquarellephotos img {/*les photos*/
+  transition: 0.3s;
+  height : inherit;
+}
+.aquarellephotos img:hover { /*passage souris*/
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 2px 15px 0 rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+.aquarellephotos figcaption {/*Le nom des photos*/
+  background-color: rgba(18, 21, 29, 0.85);
+  color: #fff;
+  font-size: 100%;
+  font-family: 'Champagne';
+	font-weight: 400;
+  padding: 0.7em;
+  text-align: center;
+  position:absolute;
+  bottom:12px;
+  right:10px;
+  left:10px;
+}
+figure { /*Encadrement des photos*/
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+}
+.legend{ /*Légende format*/
+  background-color: #201F1F;
+  text-align: left;
+  font-family:"Champagne";
+  font-size : 25px;
+  padding: 0;
+  margin: 10px;
+  z-index:4;
+}
+
+/**** Spécifique à la sous catégorie Animaux ****/
+#contenuAnimaux{
+  white-space: nowrap;
+}
+#contenuAnimaux figure {
+  height:400px;
+}
+.arrow { /*apparance flèches */
+  border: solid #0074A1;
+  border-width: 0 5px 5px 0; /*épaisseur trait*/
+  display: inline-block;
+  padding: 5px; /*espassement traits*/
+}
+.right { /*flèche droite*/
+  transform: rotate(-45deg);
+}
+.left { /*flèche gauche*/
+  transform: rotate(135deg);
+}
+.scrollbutton{ /*les boutons pour scroller*/
+  padding:14px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  outline-style: none;
+  position: absolute;
+  z-index: 3;
+  top:45%;
+}
+.scrollbutton:hover{ /*changement couleur bouton au passage de la souris*/
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+}
+#slideBack{ /*boutton gauche*/
+  border-radius: 3px 3px 3px 3px;
+  border: none;
+  left: 70px;
+}
+#slideNext{ /*bouton droit*/
+  border-radius:  3px 3px 3px 3px;
+  border: none;
+  right: 70px;
+}
+.modal {/* The Modal (background) */
+  display: none;/*caché avant click*/
+  position: fixed;
+  z-index: 9999;/*au dessus de tout*/
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {/* Modal Content */
+  position: relative;
+}
+.mySlides img{
+  margin-top: 10vh;
+  padding: 15px;
+  background-color: white;
+}
+.mySlides {
+  display: none;
+}
+
+/**** Spécifique à la sous catégorie Mini ****/
+.miniAquarelle {
+  padding: 10px;
+  overflow: hidden;
+  background-color:white;
+}
+.miniAquarelle figure{
+  background-color: #201F1F;
+  padding: 0;
+  margin: 10px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 2px 15px 0 rgba(0, 0, 0, 0.7);
+}
+.miniAquarelle img {
+  height:250px;
+  border: 8px solid #201F1F;
+}
+.miniAquarelle figcaption {/*Le nom des photos*/
+  background-color: #201F1F;
+  color: #fff;
+  font-size: 100%;
+  font-family: 'Champagne';
+	font-weight: 400;
+  padding: 0.7em;
+  padding-top: 0;
+  text-align: center;
+}
+.overlay {/*Le nom des photos*/
+  position: absolute;
+  background-color: rgba(18, 21, 29, 0.8);
+  color: #fff;
+  transition: .5s ease;
+  font-size: 15px;
+  font-family: 'Champagne';
+	font-weight: 400;
+  bottom: 0px;
+  top:0px;
+  right:0px;
+  left:0px;
+  padding-top: 130px;/*text centré*/
+  text-align: center;
+  opacity:0; /*caché*/
+}
+.miniAquarelle figure:hover .overlay { /*affichaeg du nom de l'image au passage de la souris*/
+  opacity: 1;
+}
+
+/**** Spécifique à la sous catégorie Bébé ****/
+.bébéAquarelle {
+  background-color: white;
+  text-align: left;
+  margin:0;
+  display: flex;
+  overflow-x: auto;
+}
+.bébéHippo{
+  margin: 10px;
+  background-color: #63B4B7;
+  width:440px;
+  height:500px;
+  text-align: center;
+}
+.bébéHippo img{
+  height:500px;
+}
+.bébéHippo figcaption{
+  padding:15px 5px 10px 5px;
+  color:black;
+  font-family:"Homework";
+  font-size: 30px;
+}
+.bébéLapin{
+  margin: 10px;
+  top:0;
+  background-color: #4897B5;
+  width:510px;
+  text-align: center;
+  white-space: nowrap;
+}
+.bébéLapin img,.bébéMouton img{
+  padding: 10px;
+  height:200px;
+}
+.bébéLapin figcaption, .bébéMouton figcaption{
+  padding:0;
+  color:black;
+  font-family:"Homework";
+  font-size: 30px;
+}
+.bébéMouton{
+  margin: 10px;
+  top:0;
+  background-color: #3E7FC0;
+  width:510px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/**** Spécifique à la sous catégorie Cartes ****/
+.cartesAquarelle{
+  background-color: white;
+  text-align: center;
+  margin:0;
+  overflow-x: auto;
+}
+#cartesPhotos{
+  background-color: #201F1F;
+  margin: 30px;
+  padding: 10px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 2px 15px 0 rgba(0, 0, 0, 0.7);
+}
+.cartesAquarelle{
+  overflow-x: auto;
+}
+.cartesAquarelle img{
+  height: 30vh;
+  padding: 10px;
+}
+.cartesAquarelle #title{
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Champagne';
+  font-weight: 400;
+  padding: 2px;
+  text-align: left;
+  position:relative;
+  padding-left: 10px;
+}
+.anniversaire img {
+  height: 40vh;
+}
+
+/**** Spécifique à la sous catégorie Mini ****/
+.tableauxAquarelle {
+  padding: 10px;
+  overflow: hidden;
+  background-color:white;
+}
+.tableauxAquarelle figure{
+  background-color: #201F1F;
+  padding: 0;
+  margin: 10px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 2px 15px 0 rgba(0, 0, 0, 0.7);
+}
+.tableauxAquarelle img {
+  height:250px;
+  border: 8px solid #201F1F;
+}
+.tableauxAquarelle figcaption {/*Le nom des photos*/
+  background-color: #201F1F;
+  color: #fff;
+  font-size: 100%;
+  font-family: 'Champagne';
+	font-weight: 400;
+  padding: 0.7em;
+  padding-top: 0;
+  text-align: center;
+}
+#voyage img{
+  height:350px;
+}
+
+/**** Spécifique à la sous catégorie Divers ****/
+.diversAquarelle{
+  background-color: white;
+  text-align: center;
+  margin:0;
+  overflow-x: auto;
+}
+#diversPhotos{
+  background-color: #201F1F;
+  margin: 30px;
+  padding: 10px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 2px 15px 0 rgba(0, 0, 0, 0.7);
+}
+.diversAquarelle img{
+  height: 40vh;
+  padding: 10px;
+  transition: .3s ease;
+}
+.diversAquarelle img:hover{
+  height: 60vh;
+}
+.diversAquarelle #title{
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Champagne';
+  font-weight: 400;
+  padding: 2px;
+  text-align: center;
+  position:relative;
+  padding-left: 10px;
+}
+
+
+/******************** Sous catégories - Crayon  ********************/
+.crayonContenue {
+  position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
+  white-space: nowrap;
+}
+/*Deux images supperposées avec un scroll*/
+.deuxImageComparaison{
+  position: relative;
+}
+.imgCompare {
+  position: absolute;
+  overflow:hidden;
+}
+.imgCompare img {
+  display:block;
+  vertical-align:middle;
+}
+.imgSlider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  width: 40px;
+  height: 10px;
+  background-color: #0074A1;
+  opacity: 0.9;
+}
+/*Le reste des oeuvres*/
+.crayonGalerie{/*Pour mettre le reste à côté des deux images supperposées*/
+  margin-left: 300px;
+}
+.crayonGalerie figure {/*L'encadrement des images*/
+  display:inline-table;
+  padding: 10px;
+  background-color:inherit;}
+.crayonGalerie img{
+  height: auto;
+  width: 22vw;
+}
+.crayonGalerie figcaption {/*Le nom des photos*/
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Champagne';
+  	font-weight: 400;
+    padding: 2px;
+    text-align: left;
+    position:relative;
+}
+.hr{ /*Trait décoatif après le nom */
+  align-items: center;/* centre verticalement */
+  display: flex;
+  text-align: center;
+}
+.hr::after {/*Trait décoatif après le nom*/
+  border-top: 3px solid #0074A1;
+  content: "";/* nécessaire pour afficher les pseudo-éléments */
+  flex: 1;/* partage le reste de la largeur disponible */
+  margin-left: 10px;/* espace les traits du texte */
+}
+#crayon .legend{
+  position: absolute;
+  top: 480px;
+}
+
+/******************** Sous catégories - Encre  ********************/
+.encreMenu button {/*pour que le menue des sous catégorie soit sur une ligne*/
+  display:inline-table;
+  background-color: inherit;
+  transition: 0.3s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+}
+.encreMenu{ /*barre de menu des sous catégories Aquarelle*/
+  /*background-color: #3D3D3D;*/
+  white-space: nowrap;
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  align-items: center;/*centrer par raport au texte*/
+  display: flex;
+}
+.encreMenu button h4:hover { /* Affichage du boutton au passage de la souris */
+  color: #0074A1;}
+.encreMenu::after{ /*trait design après menu */
+  display: block;
+  background-image: linear-gradient(90deg, #0074A1, transparent);
+  border: 0;
+  height: 3px;
+  content: "";/* nécessaire pour afficher les pseudo-éléments */
+  margin-left: 20px;
+  flex:1; /*A côté du titre*/
+}
+.encreGalerie {
+  margin-left: 50px;
+  margin-right: 50px;
+  white-space: nowrap;
+  max-width:100vw;
+  align-items: center;
+}
+.encreGalerie img{ /*ombres sur les images */
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 2px 15px 0 rgba(0, 0, 0, 0.7);
+}
+.encreGalerie .horizontale img{
+  width : 28vw;
+}
+.encreGalerie .verticale img{
+  width : 20vw;
+}
+.encreGalerie figure{
+  background-color: inherit;
+  margin :10px 20px 10px 20px;
+}
+.encreGalerie figcaption {/*Le nom des photos*/
+  background-color: inherit;
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Champagne';
+	font-weight: 400;
+  padding: 0.7em;
+  text-align: center;
+}
+.encreGalerie .column { /*images affichées en colonnes*/
+  display:inline-table;
+}
+#a4{ /*Cacher une catégorie au départ*/
+  display :none
+}
+#a3, #a4{/* centrer et scroll y*/
+  text-align: center;
+  max-height:70vh;
+  overflow-y: scroll;
+}
+.encreGalerie .row { /*images affichées en lignes*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/******************** Sous catégories - Stylo  ********************/
+#stylo{
+  max-width: 100vw;
+}
+.styloGalerie {
+  margin-left: 50px;
+  margin-right: 50px;
+  white-space: nowrap;
+  max-width:100vw;
+}
+.styloGalerie figure {
+  display:inline-table;
+  background-color:inherit;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.styloGalerie img{
+  height: 50vh;
+  width:auto;
+  padding: 0;
+}
+.styloGalerie figcaption {/*Le nom des photos*/
+    position: absolute;
+    background-color: rgba(18, 21, 29, 0.85);
+    color: #fff;
+    transition: .5s ease;
+    font-size: 30px;
+    font-family: 'Champagne';
+  	font-weight: 400;
+    bottom: 0;
+    top:0;
+    right:0;
+    left:0;
+    padding-top: 50%;
+    text-align: center;
+    opacity:0; /*caché*/
+}
+.styloGalerie figcaption p{
+  font-size: 20px;
+}
+.styloGalerie figure:hover figcaption { /*affichage du nom de l'image au passage de la souris*/
+  opacity: 1;
+}
+.styloGalerie h4{
+  text-align: left;
+  align-items: center;/*centrer par raport au texte*/
+  display: flex;
+  margin-left: 0;
+}
+.styloGalerie h4::after{
+  display: block;
+  background-image: linear-gradient(90deg, #0074A1, transparent);
+  border: 0;
+  height: 3px;
+  content: "";/* nécessaire pour afficher les pseudo-éléments */
+  margin-left: 20px;
+  flex:1; /*A côté du titre*/
+}
+.styloSmallGalerie{
+  padding: 0px;
+  margin-right: 50px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  max-width:100vw;
+  white-space: nowrap;
+}
+.styloSmallGalerie figure{
+  background-color: inherit;
+}
+.styloSmallGalerie img {/*les photos*/
+  transition: 0.3s;
+  height : inherit;
+  height : 400px;
+  width : auto;
+}
+.rosaces img{
+  height: 65vh;
+}
+
+/******************** Sous catégories - Craie  ********************/
+#craie{
+  max-width:100vw;
+  margin-left: 50px;
+  margin-right: 50px;
+  overflow-x: hidden;
+}
+#craie h4{
+  text-align: left;
+  align-items: center;/*centrer par raport au texte*/
+  display: flex;
+  margin-left: 0;
+}
+#craie h4::after{
+  display: block;
+  background-image: linear-gradient(90deg, #0074A1, transparent);
+  border: 0;
+  height: 3px;
+  content: "";/* nécessaire pour afficher les pseudo-éléments */
+  margin-left: 20px;
+  flex:1; /*A côté du titre*/
+}
+#craie h4::before{
+  display: block;
+  background-image: linear-gradient(90deg, transparent, #0074A1);
+  border: 0;
+  height: 3px;
+  content: "";/* nécessaire pour afficher les pseudo-éléments */
+  margin-right:20px;
+  flex:1; /*A côté du titre*/
+}
+.vin {
+  display: flex;
+  justify-content: space-between;
+  max-width:100vw;
+}
+.Coktails img, .vin img{
+  width : 15vw;
+  padding: 10px;
+}
+#craie .legend{
+  margin-bottom: 50px;
+}
+.Coktails{
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  max-width:100vw;
+}
+.citationFemmes img{
+  width : 20vw;
+}
+
+/******************** Sous catégories - A propos de moi  ********************/
+.moi{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.backImage{/*Image de fond*/
+  height: 100%;
+  max-width:100vw;
+  vertical-align: middle;
+  background-image: url("../img/AProposFond.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
+  background-size: 100%;
+  background-color: transparent;
+  background-size:cover;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+h5 { /* titre des sous catégories*/
+  text-align: center;
+  font-family:"Homework";
+  font-weight: 400;
+  font-size : 45px;
+  padding-top:50px;
+  margin-top: 50px;
+  color: white;
+}
+.maPrésentation{
+  font-family:"Champagne";
+  text-align: justify;
+  font-size : 25px;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  background-color: rgba(32, 31, 31, 0.7);
+  color: white;
+}
+h6 { /* titre des sous catégories*/
+  text-align: center;
+  font-family:"stay";
+  font-weight: 400;
+  font-size : 35px;
+  color: white;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+  margin-top:20px;
+}
+.photoProfile img{
+  width:15vw;
+  margin-right : 20px;
+  margin-bottom : 0px;
+  float : left;
+}
+.maPrésentation figure{
+  padding: 0;
+  float : left;
+  margin-right : 20px;
+  margin-bottom : 0px;
+}
+.maPrésentation figure img{
+  width:30vw;
+}
+.maPrésentation figure img:hover { /*passage souris*/
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 2px 15px 0 rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+.maPrésentation figcaption{
+  background-color: rgba(32, 31, 31, 0.7);
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Champagne';
+  font-weight: 400;
+  padding: 0.7em;
+  text-align: center;
+  position:absolute;
+  bottom:0;
+  right:0;
+  left:0;
+}
+.artRef { /*les liens vers endroits spécifiques de la page*/
+  color: #0074A1;
+  font-style : italic;
+	text-decoration: none;
+}
+
+/******************** Bas de page ********************/
+footer{
+  text-align: center;
+  font-family:"Champagne";
+  margin-top: 70px;
+}
+.merci{
+  text-align: center;
+  font-size : 25px;
+  padding: 0;
+  margin: 0;
+}
+.echange{
+  font-family: "stay";
+  text-align: center;
+  font-size : 30px;
+  padding: 0;
+  margin: 20px;
+}
+.commande{
+  text-align: center;
+  font-size : 25px;
+  padding: 0;
+  margin: 10px;
+}
+.contact{
+  display:inline-table;
+  margin: 0;
+}
+.footerlogo{
+  width: 30px;
+  max-height: 30px;
+  opacity: 0.5;
+  margin:10px;
+  cursor: pointer;
+}
+footer a{
+  text-decoration: none;
+}
+.footerlogo:hover{
+  opacity: 1;
+}
+footer span{
+  display: none;
+}
+footer button, footer button:active, footer button:focus{
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  outline-style: none;
+}
+.footer{
+  text-align: center;
+  font-size : 20px;
+  font-style : italic;
+  padding: 0;
+  margin: 20px;
+}
