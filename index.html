@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>EmmArt WebSite</title>
+      <link rel="stylesheet" type="text/css" href="./css/style.css">
+  </head>
+  <body>
+    <button onclick="topFunction()" id="topButton"><i class="arrow up"></i></button>
+    <div clas="Header" id="accueil">
+      <div class="fixedheader" id="fixed">
+        <a id ="biglogo" href="#accueil" >Emm'Art</a>
+        <a class ="menu" href="#aquarelle"> Aquarelle </a>
+        <a class ="menu" href="#crayon"> Crayon </a>
+        <a class ="menu" href="#encre"> Encre </a>
+        <a class ="menu" href="#stylo"> Stylo </a>
+        <a class ="menu" href="#craie"> Craie </a>
+        <div class="rightheader">
+          <a class ="menu" href="#moi"> À propos</a>
+        </div>
+      </div>
+      <div class="WelcomImage">
+        <div class="Name">
+            <h1>Emm'Art</h1>
+            <h2>By Emma Heitzmann</h2>
+        </div>
+      </div>
+      <div class="réseaux">
+        <a class ="insta" href="https://www.instagram.com/emmanoouche/">
+          <img class ="logo" src="./img/LogoInsta.png" alt=""></a>
+        <a class ="facebook" href="https://www.facebook.com/emma.heitzmann">
+          <img class="logo" src="./img/LogoFB.png" alt=""></a>
+      </div>
+    </div>
+    <div class="main" id="aquarelle" style="max-width:100vw;">
+      <h3> <hr> Aquarelle </h3>
+      <div class="aqurelleMennu" >
+        <button class="aqurelleLinks" onclick="openLinks(event, 'contenuAnimaux')"><h4> Animaux </h4> </button>
+        <button class="aqurelleLinks" onclick="openLinks(event, 'contenuMini')"><h4> Mini œuvres </h4> </button>
+        <button class="aqurelleLinks" onclick="openLinks(event, 'contenuBébé')"><h4> Pour bébés </h4> </button>
+        <button class="aqurelleLinks" onclick="openLinks(event, 'contenuCartes')"><h4> Cartes </h4> </button>
+        <button class="aqurelleLinks" onclick="openLinks(event, 'contenuTableaux')"><h4> Tableaux </h4> </button>
+        <button class="aqurelleLinks" onclick="openLinks(event, 'contenuDivers')"><h4> Divers </h4> </button>
+      </div>
+      <div class="categoriesContent" >
+        <div id="contenuAnimaux" class="aqurelleContenue">
+          <button class="scrollbutton" id="slideBack" type="button"><i class="arrow left"></i></button>
+          <button class="scrollbutton" id="slideNext" type="button"><i class="arrow right"></i></button>
+          <div class="aquarellephotos" id='scrollElement'>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxGirafe.jpg" onclick="openModal();currentSlide(1)">
+              <figcaption>Girafe dégoulinante</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxUsky.jpg" onclick="openModal();currentSlide(2)">
+              <figcaption>Usky dégoulinante</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxCerf.jpg" onclick="openModal();currentSlide(3)">
+              <figcaption>Cerf dégoulinante</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxZebre.jpg" onclick="openModal();currentSlide(4)">
+              <figcaption>Zèbre dégoulinante</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxGirafeRegard.jpg"onclick="openModal();currentSlide(5)">
+              <figcaption>Girafe au jolie regard</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxTigre.jpg"onclick="openModal();currentSlide(6)">
+              <figcaption>Maman tigre et son bébé</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxCarpesKoi.jpg"onclick="openModal();currentSlide(7)">
+              <figcaption>Carpes Koï</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxBaleine.jpg" onclick="openModal();currentSlide(8)">
+              <figcaption>Queue de Balaine</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxPaon.jpg" onclick="openModal();currentSlide(9)">
+              <figcaption>Paon à motifs</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxElephantAztèque.jpg" onclick="openModal();currentSlide(10)">
+              <figcaption>Elephant aztèque</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxToucan.jpg"onclick="openModal();currentSlide(11)">
+              <figcaption>Toucan</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxPerroquet.jpg" onclick="openModal();currentSlide(12)">
+              <figcaption>Perroquet bleu</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/AnimauxPerroquetFleuri.jpg" onclick="openModal();currentSlide(13)">
+              <figcaption>Perroquet fleuri</figcaption>
+            </figure>
+          </div>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span onclick="closeModal()">
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxGirafe.jpg" style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxUsky.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxCerf.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxZebre.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxGirafeRegard.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxTigre.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxCarpesKoi.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxBaleine.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxPaon.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxElephantAztèque.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxToucan.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxPerroquet.jpg"  style="height:80vh">
+                </div>
+                <div class="mySlides">
+                  <img src="./img/Aquarelle/AnimauxPerroquetFleuri.jpg"  style="height:80vh">
+                </div>
+              </span>
+            </div>
+          </div>
+          <p class="legend"> Oeuvres au format A3. </p>
+        </div>
+        <div id="contenuMini" class="aqurelleContenue">
+          <div class="miniAquarelle">
+            <figure>
+              <div class="overlay"> 22 x 21 cm </div>
+              <img src="./img/Aquarelle/MiniCerf.jpg" alt="">
+              <figcaption>Cerf Japonais</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay"> 16 x 18 cm </div>
+              <img src="./img/Aquarelle/MiniRenard.jpg" alt="">
+              <figcaption>Renard queue d'herbes</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">14 x 14 cm </div>
+              <img src="./img/Aquarelle/MiniPhare.jpg" alt="">
+              <figcaption>Phare au couché de soleil</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">15 x 21 cm </div>
+              <img src="./img/Aquarelle/MiniMontagne.jpg" alt="">
+              <figcaption>Sphère de montagnes</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">15 x 15 cm </div>
+              <img src="./img/Aquarelle/MiniBaleine.jpg" alt="">
+              <figcaption>Une baleine dans une bulle</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">15 x 15 cm </div>
+              <img src="./img/Aquarelle/MiniGoute.jpg" alt="">
+              <figcaption>Un bateau dans une goute</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">15 x 50 cm </div>
+              <img src="./img/Aquarelle/MiniGalaxie.jpg" alt="">
+              <figcaption>Galaxie </figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">11 x 21 cm </div>
+              <img src="./img/Aquarelle/MiniPlume.jpg" alt="">
+              <figcaption>Plume</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">11 x 21 cm </div>
+              <img src="./img/Aquarelle/MiniPalmier.jpg" alt="">
+              <figcaption>Palmier </figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">19 x 21 cm </div>
+              <img src="./img/Aquarelle/MiniFeuilleErable.jpg" alt="">
+              <figcaption>Patronus d'érable</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">14 x 21 cm </div>
+              <img src="./img/Aquarelle/MiniFeuille.jpg" alt="">
+              <figcaption>Feuille des montagnes</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">16 x 24 cm </div>
+              <img src="./img/Aquarelle/MiniFeuillesVertes.jpg" alt="">
+              <figcaption>Fines feuilles vertes</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">16 x 24 cm </div>
+              <img src="./img/Aquarelle/MiniFeuillesVertesLarges.jpg" alt="">
+              <figcaption>Philodendron</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay"> A4 </div>
+              <img src="./img/Aquarelle/MiniFeuillesBleues.jpg" alt="">
+              <figcaption>Areca</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay">21 x 15 cm </div>
+              <img src="./img/Aquarelle/MiniNifleur.jpg" alt="">
+              <figcaption>Nifleur - Les Animaux Fantastiques</figcaption>
+            </figure>
+            <figure>
+              <div class="overlay"> A4 </div>
+              <img src="./img/Aquarelle/MiniLionceau.jpg" alt="">
+              <figcaption>Lionceau joueur</figcaption>
+            </figure>
+
+          </div>
+        </div>
+        <div id="contenuBébé" class="aqurelleContenue">
+          <div class="bébéAquarelle">
+            <figure class="bébéHippo">
+              <img src="./img/Aquarelle/BébéHippo.jpg">
+              <figcaption>Hippo </figcaption>
+            </figure>
+            <div class ="samllBaby">
+              <figure class="bébéLapin">
+                <img src="./img/Aquarelle/BébéLapinLune.jpg">
+                <img src="./img/Aquarelle/BébéLapinNuage.jpg">
+                <img src="./img/Aquarelle/BébéLapinCoeur.jpg">
+                <figcaption>Lapin </figcaption>
+              </figure>
+              <figure class="bébéMouton">
+                <img src="./img/Aquarelle/BébéMoutonLune.jpg">
+                <img src="./img/Aquarelle/BébéMoutonNuage.jpg">
+                <img src="./img/Aquarelle/BébéMoutonEtoile.jpg">
+                <figcaption>Mouton </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div id="contenuCartes" class="aqurelleContenue">
+          <div class="cartesAquarelle">
+            <div class="noel" id="cartesPhotos">
+              <div id="title"> Cartes de Noël</div>
+              <img src="./img/Aquarelle/CarteFleurs.jpg">
+              <img src="./img/Aquarelle/CarteSapin.jpg">
+              <img src="./img/Aquarelle/CartePatin.jpg">
+              <img src="./img/Aquarelle/CarteCouronne.jpg">
+              <img src="./img/Aquarelle/CarteFlocon.jpg">
+            </div>
+            <div class="anniversaire" id="cartesPhotos">
+              <div id="title"> Cartes d'anniversaire</div>
+              <img src="./img/Aquarelle/CarteAnnivFleurs.jpg">
+            </div>
+          </div>
+        </div>
+        <div id="contenuTableaux" class="aqurelleContenue">
+          <div class="tableauxAquarelle">
+            <figure>
+              <img src="./img/Aquarelle/TableauPoudlard.jpg" alt="">
+              <figcaption>Poudlard</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/TableauRaiponce.jpg" alt="">
+              <figcaption>Raiponce</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/TableauOiseaux.jpg" alt="">
+              <figcaption>Vole d'oiseaux</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/TableauRoue.jpg" alt="">
+              <figcaption>Grande roue</figcaption>
+            </figure>
+            <figure>
+              <img src="./img/Aquarelle/TableauBallon.jpg" alt="">
+              <figcaption>Mongolfière</figcaption>
+            </figure>
+            <figure id="voyage">
+              <img src="./img/Aquarelle/TableauVoyage.jpg">
+              <figcaption>Ma seconde passion</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div id="contenuDivers" class="aqurelleContenue">
+          <div class="diversAquarelle">
+            <div class="montagnes" id="diversPhotos">
+              <div id="title"> Montagnes ou ciel ?</div>
+              <img src="./img/Aquarelle/AbstraitA1.jpg">
+              <img src="./img/Aquarelle/AbstraitA3.jpg">
+              <img src="./img/Aquarelle/AbstraitA2.jpg">
+            </div>
+            <div class="abstrait" id="diversPhotos">
+              <div id="title"> Fluide abstrait</div>
+              <img src="./img/Aquarelle/AbstraitB1.jpg">
+              <img src="./img/Aquarelle/AbstraitB2.jpg">
+              <img src="./img/Aquarelle/AbstraitB3.jpg">
+            </div>
+            <div class="abstrait" id="diversPhotos">
+              <div id="title">Inspirée par Pirates des Caraïbes</div>
+              <img src="./img/Aquarelle/DiversBateau.jpg">
+            </div>
+            <div class="abstrait" id="diversPhotos">
+              <div id="title">Décoration murale cycle lunaire</div>
+              <img src="./img/Aquarelle/DiversLunes.jpg">
+            </div>
+          </div>
+          <p class="legend"> Oeuvres au format A3. </p>
+        </div>
+      </div>
+    </div>
+    <div class="main" id="crayon" style="max-width:100vw; max-height:100vh;">
+      <h3> <hr> Crayon </h3>
+      <div class="crayonContenue">
+        <div class="deuxImageComparaison">
+          <div class="imgCompare">
+            <img src="./img/Crayon/CrayonCompareLeopard.jpg" max-width="100%" height="480px">
+          </div>
+          <div class="imgCompare supperposition">
+            <img src="./img/Crayon/CrayonCompareTigre.jpg" max-width="100%" height="480px">
+          </div>
+        </div>
+        <div class="crayonGalerie">
+          <figure>
+            <figcaption class="hr">Léopard </figcaption>
+            <img src="./img/Crayon/CrayonLeopard.jpg" alt="">
+          </figure>
+          <figure>
+            <figcaption class="hr">Tigre </figcaption>
+            <img src="./img/Crayon/CrayonTigre.jpg" alt="">
+          </figure>
+          <figure>
+            <figcaption class="hr">Les deux félins</figcaption>
+            <a href="./img/Crayon/CrayonsFelins.jpg">
+            <img src="./img/Crayon/CrayonsFelins.jpg" alt=""></a>
+          </figure>
+        </div>
+        <p class="legend"> Oeuvres au format 50 x 70 cm. </p>
+      </div>
+    </div>
+    <div class="main" id="encre">
+      <h3> <hr> Encre </h3>
+      <div class="encreMenu" >
+        <h4> Oeuvres au format </h4>
+        <button class="encreLinks" onclick="openFormat(event, 'a3')"><h4> A3 </h4> </button>
+        <button class="encreLinks" onclick="openFormat(event, 'a4')"><h4> A4 </h4> </button>
+      </div>
+      <div class="encreGalerie" id="a3">
+        <div class="column verticale">
+          <figure>
+            <img src="./img/Encre/Ambedo.jpg"
+              onmouseover="this.src='./img/Encre/Ambedo_gold.jpg'"
+              onmouseout="this.src='./img/Encre/Ambedo.jpg'">
+            <figcaption>Ambedo</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Encre/Nébuleuse.jpg"
+              onmouseover="this.src='./img/Encre/Nébuleuse_gold.jpg'"
+              onmouseout="this.src='./img/Encre/Nébuleuse.jpg'">
+            <figcaption>Nébuleuse</figcaption>
+          </figure>
+        </div>
+        <div class="column horizontale">
+          <figure>
+            <img src="./img/Encre/Ellipsim.jpg"
+              onmouseover="this.src='./img/Encre/Ellipsim_gold.jpg'"
+              onmouseout="this.src='./img/Encre/Ellipsim.jpg'">
+            <figcaption>Ellipsim</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Encre/Andronite.jpg"
+              onmouseover="this.src='./img/Encre/Andronite_gold.jpg'"
+              onmouseout="this.src='./img/Encre/Andronite.jpg'">
+            <figcaption>Andronite</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Encre/SombreNaturel.jpg"
+              onmouseover="this.src='./img/Encre/SombreNaturel_gold.jpg'"
+              onmouseout="this.src='./img/Encre/SombreNaturel.jpg'">
+            <figcaption>Sombre Natuel</figcaption>
+          </figure>
+        </div>
+        <div class="column verticale">
+          <figure>
+            <img src="./img/Encre/Sycophante.jpg"
+              onmouseover="this.src='./img/Encre/Sycophante_gold.jpg'"
+              onmouseout="this.src='./img/Encre/Sycophante.jpg'">
+            <figcaption>Sycophante</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Encre/Nénuphare.jpg"
+              onmouseover="this.src='./img/Encre/Nénuphare_gold.jpg'"
+              onmouseout="this.src='./img/Encre/Nénuphare.jpg'">
+            <figcaption>Nénuphare</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="encreGalerie" id="a4">
+        <div class="row horizontale">
+          <figure>
+            <img src="./img/Encre/Chrysalisme.jpg"
+              onmouseover="this.src='./img/Encre/Chrysalisme_gold.jpg'"
+              onmouseout="this.src='./img/Encre/Chrysalisme.jpg'">
+            <figcaption>Chrysalisme</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Encre/CarpeKoi.jpg"
+              onmouseover="this.src='./img/Encre/CarpeKoi_gold.jpg'"
+              onmouseout="this.src='./img/Encre/CarpeKoi.jpg'">
+            <figcaption>Carpe Koi</figcaption>
+          </figure>
+        </div>
+        <div class="row verticale">
+          <figure>
+            <img src="./img/Encre/CroissanceTurquoise.jpg"
+              onmouseover="this.src='./img/Encre/CroissanceTurquoise_gold.jpg'"
+              onmouseout="this.src='./img/Encre/CroissanceTurquoise.jpg'">
+            <figcaption>Croissance Turquoise</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Encre/Équanimité.jpg"
+              onmouseover="this.src='./img/Encre/Équanimité_gold.jpg'"
+              onmouseout="this.src='./img/Encre/Équanimité.jpg'">
+            <figcaption>Équanimité</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Encre/GoldenTides.jpg"
+              onmouseover="this.src='./img/Encre/GoldenTides_gold.jpg'"
+              onmouseout="this.src='./img/Encre/GoldenTides.jpg'">
+            <figcaption>Golden Tides</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="main" id="stylo">
+      <h3> <hr> Stylo </h3>
+      <div class="styloGalerie">
+        <h4> Rosaces </h4>
+        <div class="rosaces">
+          <figure>
+            <figcaption>Deux rosaces <p> Format : A4 </p> </figcaption>
+            <img src="./img/Stylo/StyloRosace2.jpg" alt="">
+            </figure>
+          <figure>
+            <figure>
+              <figcaption>Une rosaces <p> Format : A4 </p> </figcaption>
+              <img src="./img/Stylo/StyloRosace1.jpg" alt="">
+              </figure>
+          <figure>
+        </div>
+        <h4> Inspiration aztèque </h4>
+        <div class="aztèquegros">
+          <figure>
+            <figcaption>Chouette aztèque <p> Format : A4 </p> </figcaption>
+            <img src="./img/Stylo/StyloChouette.jpg" alt="">
+            </figure>
+          <figure>
+            <figcaption>Loups aztèque <p> Format : A3 </p> </figcaption>
+            <img src="./img/Stylo/StyloLoups.jpg" alt="">
+          </figure>
+          <figure>
+            <figcaption>Ours aztèque <p> Format : A3 </p> </figcaption>
+            <img src="./img/Stylo/StyloOurs.jpg" alt="">
+          </figure>
+        </div>
+        <h4> Inspiration aztèque pour enfants </h4>
+        <div class="styloSmallGalerie" id="scrollElement2">
+          <figure>
+            <img src="./img/Stylo/StyloLama.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Lama aztèque  <p> Format : 29.5 x 19.5 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Stylo/StyloBouc.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Bouc aztèque  <p> Format : 29.5 x 21 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Stylo/StyloCerf.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Cerf aztèque  <p> Format : 32 x 2 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Stylo/StyloGirafe.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Girafe aztèque  <p> Format : 24 x 16 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Stylo/StyloKoala.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Koala aztèque  <p> Format : 21 x 15 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Stylo/StyloElephant.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Elephant aztèque  <p> Format : 24 x 16 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Stylo/StyloGorille.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Gorille aztèque  <p> Format : 21 x 15 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="./img/Stylo/StyloLémurien.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Lémurien aztèque  <p> Format : 21 x 15 cm </p> </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="main" id="craie">
+      <h3> <hr> Craie </h3>
+      <h4> Citations sur le vin </h4>
+      <div class="vin">
+        <img src="./img/Craie/BestWine.jpg">
+        <img src="./img/Craie/WaterWine.jpg">
+        <img src="./img/Craie/WineTime.jpg">
+        <img src="./img/Craie/LifeWine.jpg">
+        <img src="./img/Craie/WineImprove.jpg">
+      </div>
+      <p class="legend"> Oeuvres au format A5. </p>
+      <h4> Affiches de coktails </h4>
+      <div class="Coktails">
+        <img src="./img/Craie/TomCollins.jpg">
+        <img src="./img/Craie/DeliceDesIles.jpg">
+        <img src="./img/Craie/SexOnTheBeach.jpg">
+        <img src="./img/Craie/Cosmo.jpg">
+        <img src="./img/Craie/BlueHawaiian.jpg">
+        <img src="./img/Craie/VodkaMartini.jpg">
+        <img src="./img/Craie/IrishCoffee.jpg">
+        <img src="./img/Craie/BloodyMary.jpg">
+        <img src="./img/Craie/Margarita.jpg">
+        <img src="./img/Craie/Mojito.jpg">
+        <img src="./img/Craie/French75.jpg">
+        <img src="./img/Craie/Aviation.jpg">
+        <img src="./img/Craie/GinTonic.jpg">
+        <img src="./img/Craie/Paloma.jpg">
+        <img src="./img/Craie/SideCare.jpg">
+      </div>
+      <p class="legend"> Oeuvres au format A5. </p>
+      <h4> Citation </h4>
+      <div class="citationFemmes">
+        <img src="./img/Craie/FlamantRose.jpg">
+      </div>
+      <p class="legend"> Oeuvres au format A3. </p>
+    </div>
+    <div class="main" id="moi">
+      <div class="backImage">
+        <h5> À propos de moi  </h5>
+        <div class="maPrésentation">
+          <div class="photoProfile">
+            <img src="./img/PhotoProfile.jpg" alt="">
+          </div>
+          <div class="presentationText">
+            Je m'appel Emma HEITZMANN, née en 1997 à Mulhouse.</br>
+            Peindre n'est pas ma vocation mais ma passion. Je suis ingénieure spécialisée dans les technologies pour la santé.
+            Je peins pour m'évader à mes heures perdues et j'avoue que cela m'a bien aidé au cours des derniers confinements.
+            Mon amour pour l'art à toujours fait parti de moi, dès mon plus jeune âge.
+            Je me suis lancée de manière plus sérieuse dans le dessin lors de l'été 2012, j'avais 14 ans.
+            Ensuite, je dessinais moins souvent, essentiellement dans le train ou l'avion.
+            Je n'avais jamais pris de leçon mais j'étais déjà à l'époque plutôt douée.
+            J'avais pour seul attrait le dessin d'animaux et m'inspirais de photos.
+            En 2017, après une longue pause sans aucune expression de mon art depuis plusieurs années,
+            je me suis lancée du jour au lendemain dans la peinture.
+            Jusqu'ici, l'art était pour moi un passe temps, un divertissement ou encore une passion.
+            Après mon emménagement dans un premier appartement, j'ai commencé à peindre avec plus d'enthousiasme afin d'utiliser mes œuvre pour décorer mon intérieur.
+            Mes proches ont alors commencé à me solliciter pour décorer le leur.
+            L'appréciation de mon art auprès de mes proches me laisse penser que cela pourrait intéresser d'autres personnes, comme vous par exemple.
+            Aujourd'hui, j'ai choisi de partager mon art avec vous via cette page en espérant en inspirer certain d'entre vous.
+            Ou peut-être que ce sont vos retours qui m'inspireront.
+          </div>
+        </div>
+        <h5> Mes styles</h5>
+        <div class="maPrésentation">
+          <h6> Le dessin</h6>
+          <figure>
+            <img src="./img/beginning.jpg" onclick="window.open(this.src,'_blank','toolbar=0, location=0, directories=0, status=0, scrollbars=0, resizable=0, copyhistory=0, menuBar=0, width='+this.width+', height='+this.height);" >
+            <figcaption>Dessins réalisés en 2012-2013 </figcaption>
+          </figure>
+          Comme toute novice, j'ai d'abord commencé par de simples dessins au crayon de papier sur feuilles A4 blanches.
+          En 2018, après 3 ans sans aucune création de dessin, j'ai débuté de nouvelles œuvres au <a class ="artRef" href="#stylo"> stylo </a> en m'appropriant un nouveau style inspiré de la culture Aztèque et leurs symboles Maya.
+          Il s'agit d'un art plutôt simple qui ne demande pas énormément de technique mais surtout de la patience.
+          En 2019, j'ai finalement repris le dessin au crayon à papier mais cette fois j'ai inversé les couleurs : <a class ="artRef" href="#crayon"> crayon blanc sur fond noir.</a>
+          Pour cela, je me suis inspirée de mes premiers dessins, réalisés en 2012-2013, qui représentait la plus part du temps des félins. J'ai donc repris ce style.
+          J'étais assez surprise de voir que je n'avais pas perdu mon talent après tant d'année sans crayonner. Au contraire, j'avais même progressée sans aucun effort.
+          Pour illustrer : en comparant le tigre qui était ma première œuvre au crayon depuis plus de 5 ans sans avoir dessiné dans ce style,
+          et le léopard réalisé quelques mois après avoir fini le tigre, nous pouvons observer sans difficulté une monté en compétences.
+          Comme quoi il est bon de pratiquer sans relâche pour progresser. Cela s'applique je pense à toute pratique artistique, physique ou intellectuelle.
+          </br>
+          J'aime le dessin au stylo pour avoir un tracé précis et bien démarqué du support.
+          J'ai également expérimenté la <a class ="artRef" href="#craie"> craie </a>  sur papier noir pour imiter les ardoise présentées dans des bars ou restaurants.
+          Cependant, pour un dessin rempli de détails, contrastes, dégradés ou textures, le crayon reste un meilleur outil.
+          J'ai une préférence pour le crayon car cela me rappelle mes début dans le vaste domaine qu'est l'art sur papier.
+          J'aime prendre du recul sur mes anciennes œuvres et observer mon progrès dans les détails des dessins.
+        </div>
+        <div class="maPrésentation">
+          <h6> La peinture</h6>
+          Mes premiers essais en peinture furent réalisés à <a class ="artRef" href="#aquarelle"> l'aquarelle </a>  car j'ai une préférences pour les couleurs claires, et surtout,
+          je préfère avoir un trait de pinceau léger et une peinture bien diluée.
+          De plus, il est très facile de réaliser tout les mélanges de couleurs possibles avec une palette basique.
+          Il s'agit aussi d'une des peintures surement les moins chères car finalement on en utilise très peu pour réaliser une œuvre.
+          Ce que j'apprécie par-dessus tout avec l'aquarelle, c'est le dégradé de couleurs qui se forme au contact du pinceau sur une feuille préalablement mouillée.
+          </br>
+          Après avoir expérimenté différents styles à l'aquarelle, j'ai fini par me tourné vers l'art abstrait. Toutefois, je trouve que l'aquarelle n'est pas très adaptée à cette forme de peinture.
+          Je me suis donc intéressée aux <a class ="artRef" href="#encre"> encre à alcool </a> avec des premiers essais en 2020.
+          Je suis particulièrement fascinée par les encres métalliques et la façon dont elles se déploient autour de différentes tâches d’encre.
+          Observer l'encre s'écouler comme un fluide à travers le tracé d'alcool sur la feuille est carrément hypnotisant pour moi.
+          J'apprécie le défi qu'est d'essayer de contrôler le mouvement des encres en utilisant mes mains, la gravité, ou ma propre respiration.
+          Ce qui m'attire dans l'art abstrait est de pouvoir laisser la liberté à chacun de visualiser, d'imaginer ou d'interpréter différemment l'œuvre.
+          C'est d'ailleurs l'une des parties les plus gratifiantes de la création d'art abstrait.
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p class="merci">
+        Merci d'avoir visité ma page, j'espères que mes oeuvres t'ont plu !
+        <br> N'hésite pas à me contacter pour me donner ton avis.</p>
+      <p class="echange"> Tu as un projet ? Je serais ravis d'échanger à ce sujet !</p>
+      <p class ="contact">
+        <a class ="insta" href="https://www.instagram.com/emmanoouche/">
+          <img class="footerlogo" src="./img/LogoInsta.png" ></a>
+        <a class ="facebook" href="https://www.facebook.com/emma.heitzmann">
+          <img class="footerlogo" src="./img/LogoFB.png" ></a>
+        <span id="tocopy">emm_art@outlook.fr</span>
+        <button class="js-copy" data-target="#tocopy">
+          <img class="footerlogo" src="./img/LogoEmail.png" alt=""></button>
+      </p>
+      <p class="commande">
+        Je suis disponible pour d'éventuelles commandes sur mesure dans la limite du raisonnable.
+        <br> Tu peux aussi acheté une des oeuvre que tu viens de voir si elle est encore disponible.
+      </p>
+      <p class="footer">
+        Présenter mon art via une page web était le moyen pour moi d'allier mes deux passions : la tehnologie et l'art.
+        <br>Eh oui cette page à entièrement été codée par mes soins pendant mon temps libre !
+      </p>
+    </footer>
+    <script src = "./js/script.js" > </script>
+    <script>
+      initComparisons();
+    </script>
+</body>
+</html>
