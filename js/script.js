@@ -5,40 +5,45 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-/*******Evenement agrandir le menu au passage de la souris*******/
-if (document.getElementsByClassName("menu")){/*execute ce script seulement si la class est présent dans le fichier html*/
-  var menu = document.getElementsByClassName("menu");
-  var i;
-  for(i = 0; i < menu.length; i++){ /*boucle for sur tout les menu présents dans le document*/
-    menu[i].addEventListener("mouseover", function(event){/*souris dessus*/
-      event.target.style.fontSize = "30px";
-    });
-    menu[i].addEventListener("mouseout", function(event){/*retour à l'état initial*/
-      event.target.style.fontSize = "25px";
-    });
-  }
-}
-
 /******** scroll avec menu fixe ********/
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("fixed").style.padding = "5px 5px";
-    document.getElementById("biglogo").style.fontSize = "50px";
+    // Définir la taille de la police e l'éspace entre les mots
+    document.getElementById("fixed").style.padding = "1vh 1vw 1vh 1vw";
+    document.getElementById("biglogo").style.fontSize = "4vw";
     var menu = document.getElementsByClassName("menu");
     for(i = 0; i < menu.length; i++){ /*boucle for sur tout les menu présents dans le document*/
-      menu[i].style.fontSize = "20px"; }
+      menu[i].style.fontSize = "1.5vw"; }
     // Faire apparaitre le bouton scroll to top
     document.getElementById("topButton").style.display = "block";
-
+    // agrandir menu au passage de la souris
+    for(i = 0; i < menu.length; i++){ /*boucle for sur tout les menu présents dans le document*/
+      menu[i].addEventListener("mouseover", function(event){/*souris dessus*/
+        event.target.style.fontSize = "2vw";
+      });
+      menu[i].addEventListener("mouseout", function(event){/*retour à l'état initial*/
+        event.target.style.fontSize = "1.5vw";
+      });
+    }
   } else {
-    document.getElementById("fixed").style.padding = "10px 10px";
-    document.getElementById("biglogo").style.fontSize = "70px";
+    // Définir la taille de la police e l'éspace entre les mots
+    document.getElementById("fixed").style.padding = "1.2vh 1.2vw 1.2vh 1.2vw;";
+    document.getElementById("biglogo").style.fontSize = "5vw";
     var menu = document.getElementsByClassName("menu");
     for(i = 0; i < menu.length; i++){
-      menu[i].style.fontSize = "25px"; }
-      // Faire disparaitre le bouton scroll to top
-      document.getElementById("topButton").style.display = "none";
+      menu[i].style.fontSize = "2vw"; }
+    // Faire disparaitre le bouton scroll to top
+    document.getElementById("topButton").style.display = "none";
+    // agrandir menu au passage de la souris
+    for(i = 0; i < menu.length; i++){ /*boucle for sur tout les menu présents dans le document*/
+      menu[i].addEventListener("mouseover", function(event){/*souris dessus*/
+        event.target.style.fontSize = "2.5vw";
+      });
+      menu[i].addEventListener("mouseout", function(event){/*retour à l'état initial*/
+        event.target.style.fontSize = "2vw";
+      });
+    }
   }
 }
 
@@ -122,81 +127,6 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "block";
-}
-
-/******** Comparer deux images ********/
-function initComparisons() {
-  contenu = document.getElementsByClassName("deuxImageComparaison");
-    var x, i;
-    x = document.getElementsByClassName("supperposition");
-    for (i = 0; i < x.length; i++) {
-      compareImages(x[i]);
-    }
-    function compareImages(img) {
-      var slider, img, clicked = 0, w, h;
-      w = img.offsetWidth;
-      h = img.offsetHeight;
-      /*set the width of the img element to 50%:*/
-      img.style.width = (w / 2) + "px";
-      /*create slider:*/
-      slider = document.createElement("DIV");
-      slider.setAttribute("class", "imgSlider");
-      /*insert slider*/
-      img.parentElement.insertBefore(slider, img);
-      /*position the slider in the middle:*/
-      slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
-      slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
-      /*execute a function when the mouse button is pressed:*/
-      slider.addEventListener("mousedown", slideReady);
-      /*and another function when the mouse button is released:*/
-      window.addEventListener("mouseup", slideFinish);
-      /*or touched (for touch screens:*/
-      slider.addEventListener("touchstart", slideReady);
-      /*and released (for touch screens:*/
-      window.addEventListener("touchend", slideFinish);
-      function slideReady(e) {
-        /*prevent any other actions that may occur when moving over the image:*/
-        e.preventDefault();
-        /*the slider is now clicked and ready to move:*/
-        clicked = 1;
-        /*execute a function when the slider is moved:*/
-        window.addEventListener("mousemove", slideMove);
-        window.addEventListener("touchmove", slideMove);
-      }
-      function slideFinish() {
-        /*the slider is no longer clicked:*/
-        clicked = 0;
-      }
-      function slideMove(e) {
-        var pos;
-        /*if the slider is no longer clicked, exit this function:*/
-        if (clicked == 0) return false;
-        /*get the cursor's x position:*/
-        pos = getCursorPos(e)
-        /*prevent the slider from being positioned outside the image:*/
-        if (pos < 0) pos = 0;
-        if (pos > w) pos = w;
-        /*execute a function that will resize the overlay image according to the cursor:*/
-        slide(pos);
-      }
-      function getCursorPos(e) {
-        var a, x = 0;
-        e = e || window.event;
-        /*get the x positions of the image:*/
-        a = img.getBoundingClientRect();
-        /*calculate the cursor's x coordinate, relative to the image:*/
-        x = e.pageX - a.left;
-        /*consider any page scrolling:*/
-        x = x - window.pageXOffset;
-        return x;
-      }
-      function slide(x) {
-        /*resize the image:*/
-        img.style.width = x + "px";
-        /*position the slider:*/
-        slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
-      }
-    }
 }
 
 /******** Affichage du contenue encre lorsque l'utilisateur choisi la catégorie ********/
