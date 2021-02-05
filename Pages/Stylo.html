@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>EmmArt WebSite - Stylo</title>
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </head>
+  <body>
+    <button onclick="topFunction()" id="topButton"><i class="arrow up"></i></button>
+    <div clas="header" id="accueil">
+      <a class ="menu" id ="biglogo" href="../index.html" >Emm'Art</a>
+      <a class ="menu" href="./Aquarelle.html"> Aquarelle </a>
+      <a class ="menu" href="./Crayon.html"> Crayon </a>
+      <a class ="menu" href="./Encre.html"> Encre </a>
+      <a class ="menu" href="#stylo"> Stylo </a>
+      <a class ="menu" href="./Craie.html"> Craie </a>
+      <div class="rightheader">
+        <a class ="menu" href="./APropos.html"> À propos</a>
+      </div>
+    </div>
+    <div class="main" id="stylo">
+      <h3> <hr> Stylo </h3>
+      <div class="styloGalerie">
+        <h4> Rosaces </h4>
+        <div class="rosaces">
+          <figure>
+            <figcaption>Deux rosaces <p> Format : A4 </p> </figcaption>
+            <img src="../img/Stylo/StyloRosace2.jpg" alt="">
+            </figure>
+          <figure>
+            <figure>
+              <figcaption>Une rosaces <p> Format : A4 </p> </figcaption>
+              <img src="../img/Stylo/StyloRosace1.jpg" alt="">
+              </figure>
+          <figure>
+        </div>
+        <h4> Inspiration aztèque </h4>
+        <div class="aztèquegros">
+          <figure>
+            <figcaption>Chouette aztèque <p> Format : A4 </p> </figcaption>
+            <img src="../img/Stylo/StyloChouette.jpg" alt="">
+            </figure>
+          <figure>
+            <figcaption>Loups aztèque <p> Format : A3 </p> </figcaption>
+            <img src="../img/Stylo/StyloLoups.jpg" alt="">
+          </figure>
+          <figure>
+            <figcaption>Ours aztèque <p> Format : A3 </p> </figcaption>
+            <img src="../img/Stylo/StyloOurs.jpg" alt="">
+          </figure>
+        </div>
+        <h4> Inspiration aztèque pour enfants </h4>
+        <div class="styloSmallGalerie" id="scrollElement2">
+          <figure>
+            <img src="../img/Stylo/StyloLama.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Lama aztèque  <p> Format : 29.5 x 19.5 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="../img/Stylo/StyloBouc.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Bouc aztèque  <p> Format : 29.5 x 21 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="../img/Stylo/StyloCerf.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Cerf aztèque  <p> Format : 32 x 2 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="../img/Stylo/StyloGirafe.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Girafe aztèque  <p> Format : 24 x 16 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="../img/Stylo/StyloKoala.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Koala aztèque  <p> Format : 21 x 15 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="../img/Stylo/StyloElephant.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Elephant aztèque  <p> Format : 24 x 16 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="../img/Stylo/StyloGorille.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Gorille aztèque  <p> Format : 21 x 15 cm </p> </figcaption>
+          </figure>
+          <figure>
+            <img src="../img/Stylo/StyloLémurien.jpg" onclick="openModal();currentSlide(1)">
+            <figcaption>Lémurien aztèque  <p> Format : 21 x 15 cm </p> </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p class="merci">
+        Merci d'avoir visité ma page, j'espère que mes oeuvres t'ont plu !
+        <br> N'hésite pas à me contacter pour me donner ton avis.</p>
+      <p class="echange"> Tu as un projet ? Je serais ravi d'échanger à ce sujet !</p>
+      <p class ="contact">
+        <a class ="insta" href="https://www.instagram.com/emmanoouche/">
+          <img class="footerlogo" src="../img/LogoInsta.png" ></a>
+        <a class ="facebook" href="https://www.facebook.com/emma.heitzmann">
+          <img class="footerlogo" src="../img/LogoFB.png" ></a>
+        <span id="tocopy">emm_art@outlook.fr</span>
+        <button class="js-copy" data-target="#tocopy">
+          <img class="footerlogo" src="../img/LogoEmail.png" alt=""></button>
+      </p>
+      <p class="commande">
+        Je suis disponible pour d'éventuelles commandes sur mesure dans la limite du raisonnable.
+        <br> Tu peux aussi acheter une des oeuvres que tu viens de voir si elle est encore disponible.
+      </p>
+      <p class="footer">
+        Présenter mon art via une page web était le moyen pour moi d'allier mes deux passions : tehnologies et art.
+        <br>Eh oui cette page a entièrement été codée par mes soins pendant mon temps libre !
+      </p>
+    </footer>
+    <script src = "../js/script.js" > </script>
+</body>
+</html>
