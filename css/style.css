@@ -354,8 +354,8 @@ figure { /*Encadrement des photos*/
   position: relative;
 }
 .mySlides img{
-  margin-top: 10vh;
-  padding: 5vw;
+  margin-top: 50px;
+  padding: 10px;
   background-color: white;
 }
 .mySlides {
