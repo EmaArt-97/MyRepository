@@ -9,41 +9,11 @@ function topFunction() {
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    // Définir la taille de la police e l'éspace entre les mots
-    document.getElementById("fixed").style.padding = "1vh 1vw 1vh 1vw";
-    document.getElementById("biglogo").style.fontSize = "4vw";
-    var menu = document.getElementsByClassName("menu");
-    for(i = 0; i < menu.length; i++){ /*boucle for sur tout les menu présents dans le document*/
-      menu[i].style.fontSize = "1.5vw"; }
     // Faire apparaitre le bouton scroll to top
     document.getElementById("topButton").style.display = "block";
-    // agrandir menu au passage de la souris
-    for(i = 0; i < menu.length; i++){ /*boucle for sur tout les menu présents dans le document*/
-      menu[i].addEventListener("mouseover", function(event){/*souris dessus*/
-        event.target.style.fontSize = "2vw";
-      });
-      menu[i].addEventListener("mouseout", function(event){/*retour à l'état initial*/
-        event.target.style.fontSize = "1.5vw";
-      });
-    }
   } else {
-    // Définir la taille de la police e l'éspace entre les mots
-    document.getElementById("fixed").style.padding = "1.2vh 1.2vw 1.2vh 1.2vw;";
-    document.getElementById("biglogo").style.fontSize = "5vw";
-    var menu = document.getElementsByClassName("menu");
-    for(i = 0; i < menu.length; i++){
-      menu[i].style.fontSize = "2vw"; }
     // Faire disparaitre le bouton scroll to top
     document.getElementById("topButton").style.display = "none";
-    // agrandir menu au passage de la souris
-    for(i = 0; i < menu.length; i++){ /*boucle for sur tout les menu présents dans le document*/
-      menu[i].addEventListener("mouseover", function(event){/*souris dessus*/
-        event.target.style.fontSize = "2.5vw";
-      });
-      menu[i].addEventListener("mouseout", function(event){/*retour à l'état initial*/
-        event.target.style.fontSize = "2vw";
-      });
-    }
   }
 }
 
