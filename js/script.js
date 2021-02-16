@@ -4,8 +4,6 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-/******** scroll avec menu fixe ********/
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -17,6 +15,24 @@ function scrollFunction() {
   }
 }
 
+/******** Conversion de la barre de navigation ********/
+function topnavFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+/******** Conversion de la barre de menu ********/
+function menuFunction() {
+  var x = document.getElementById("menuDeroulant");
+  if (x.className === "aqurelleMenu") {
+    x.className += " responsive";
+  } else {
+    x.className = "aqurelleMenu";
+  }
+}
 /******** Affichage du contenue aquarelle lorsque l'utilisateur choisi la catégorie ********/
 function openLinks(evt, categoriesName) {
   var i, aqurelleLinks, aqurelleContenue;
