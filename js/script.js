@@ -116,13 +116,13 @@ function showSlides(n) {
 }
 
 /******** Affichage du contenue encre lorsque l'utilisateur choisi la catégorie ********/
-function openFormat(evt, categoriesName) {
+function openFormat(evt, format) {
   var i, encreGalerie;
   encreGalerie = document.getElementsByClassName("encreGalerie");
   for (i = 0; i < encreGalerie.length; i++) {
     encreGalerie[i].style.display = "none";
   }
-  document.getElementById(categoriesName).style.display = "block";
+  document.getElementById(format).style.display = "inline-flex";
 }
 
 /******** Copier dans press papier ********/
