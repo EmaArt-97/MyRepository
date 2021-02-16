@@ -8,26 +8,28 @@
   </head>
   <body>
     <button onclick="topFunction()" id="topButton"><i class="arrow up"></i></button>
-    <div clas="header" id="accueil">
-      <a class ="menu" id ="biglogo" href="../index.html" >Emm'Art</a>
-      <a class ="menu" href="#aquarelle"> Aquarelle </a>
-      <a class ="menu" href="./Crayon.html"> Crayon </a>
-      <a class ="menu" href="./Encre.html"> Encre </a>
-      <a class ="menu" href="./Stylo.html"> Stylo </a>
-      <a class ="menu" href="./Craie.html"> Craie </a>
-      <div class="rightheader">
-        <a class ="menu" href="./APropos.html"> À propos</a>
-      </div>
+    <div class="topnav" id="myTopnav">
+      <a id ="biglogo" href="../index.html" >Emm'Art</a>
+      <a href="#aquarelle"> Aquarelle </a>
+      <a href="./Crayon.html"> Crayon </a>
+      <a href="./Encre.html"> Encre </a>
+      <a href="./Stylo.html"> Stylo </a>
+      <a href="./Craie.html"> Craie </a>
+      <a id ="rightheader" href="./APropos.html"> À propos</a>
+      <img href="javascript:void(0);" class="icon" onclick="topnavFunction()" src="../img/IconMenu.png">
     </div>
+
     <div class="main" id="aquarelle">
       <h3> <hr> Aquarelle </h3>
-      <div class="aqurelleMennu" >
+      <div class="aqurelleMenu" id="menuDeroulant">
+        <button>
         <button class="aqurelleLinks" onclick="openLinks(event, 'contenuAnimaux')"><h4> Animaux </h4> </button>
         <button class="aqurelleLinks" onclick="openLinks(event, 'contenuMini')"><h4> Mini œuvres </h4> </button>
         <button class="aqurelleLinks" onclick="openLinks(event, 'contenuBébé')"><h4> Pour bébés </h4> </button>
         <button class="aqurelleLinks" onclick="openLinks(event, 'contenuCartes')"><h4> Cartes </h4> </button>
         <button class="aqurelleLinks" onclick="openLinks(event, 'contenuTableaux')"><h4> Tableaux </h4> </button>
         <button class="aqurelleLinks" onclick="openLinks(event, 'contenuDivers')"><h4> Divers </h4> </button>
+        <img href="javascript:void(0);" class="menu_icon" onclick="menuFunction()" src="../img/IconMenu.png">
       </div>
       <div class="categoriesContent" >
         <div id="contenuAnimaux" class="aqurelleContenue">
