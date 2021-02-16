@@ -20,6 +20,7 @@
   font-family: "Serif";
   src : url("./police/Serif.otf");
 }
+/* Style global*/
 html { /* style du scroll*/
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -34,9 +35,9 @@ body { /* corps du texte */
   border: 0;
   color: rgba(255, 255, 255, 0.6);
   max-width: 100vw;
-  font-size: 100%;
   font-family: "Champagne";
 }
+/* Bputon retour au début de page */
 #topButton { /*Le bouton pour revenir au début de la page*/
   display: none;
   position: fixed;
@@ -78,8 +79,93 @@ body { /* corps du texte */
 ::-webkit-scrollbar-thumb:hover {/* lorsqu'on click sur la barre */
   background: #035A7C;
 }
+/* Taille de la police en fonction de la taille de l'écran */
+@media screen and (max-width: 400px){/* Smartphone */
+  h3 {
+    font-size: 2.25rem; /*36px*/
+  }
+  h4{
+    font-size: 1.25rem; /*20px*/
+  }
+  h5{
+    font-size: 1.125rem; /*18px*/
+  }
+  h6{
+    font-size: 1.0625rem; /*17px*/
+  }
+  hr{
+    width: 55px;
+    height: 2px;
+  }
+  figcaption, P, .overlay, #title{
+    font-size: 1rem; /*16px*/
+  }
+  .encreMenu::after, .styloGalerie h4::after, #craie h4::after, #craie h4::before{
+    height: 1.5px;
+  }
+  .footerlogo{
+    height:16px;
+  }
+}
+@media screen and (min-width: 400px){/* Tablette */
+  h3 {
+    font-size: 3.5rem; /*56px*/
+  }
+  h4{
+    font-size: 1.625rem; /*26px*/
+  }
+  h5{
+    font-size: 1.5rem; /*24px*/
+  }
+  h6{
+    font-size: 1.375rem; /*22px*/
+  }
+  hr{
+    width: 80px;
+    height: 3px;
+  }
+  figcaption, P, .overlay{
+    font-size: 1.125rem; /*18px*/
+  }
+  #title{
+    font-size: 1.25rem; /*20px*/
+  }
+  .encreMenu::after, .styloGalerie h4::after,#craie h4::after, #craie h4::before{
+    height: 2px;
+  }
+  .footerlogo{
+    height:18px;
+  }
+}
+@media screen and (min-width: 900px){/* PC */
+  h3 {
+    font-size: 4.75rem; /*76px*/
+  }
+  h4{
+    font-size: 1.875rem; /*30px*/
+  }
+  h5{
+    font-size: 1.75rem; /*28px*/
+  }
+  h6{
+    font-size: 1.625rem; /*26px*/
+  }
+  hr{
+    width: 110px;
+    height: 5px;
+  }
+  figcaption, P, .overlay{
+    font-size: 1.25rem; /*20px*/
+  }
+  #title{
+    font-size: 1.625rem; /*26px*/
+  }
+  .footerlogo{
+    height:20px;
+  }
+}
 
-/******************** Page d'acceuil ********************/
+/******************** Page d'accueil ********************/
 .WelcomImage{/*Image de la page d'accueil*/
   height:100vh;
   max-width:100vw;
@@ -98,7 +184,7 @@ h1 {/*Le logo Emm'Art sur la page d'accueil*/
   text-align: center;
   font-family:"Calligraphy";
   color: #201F1F;
-  font-size : 10vw;
+  font-size : 100px;
   font-weight: 400;
   margin: 0;
   padding-top:  3vh;
@@ -107,93 +193,119 @@ h1 {/*Le logo Emm'Art sur la page d'accueil*/
 h2 {/* Mon nom sur la page d'accueil*/
   text-align: center;
   font-family:"Verdana";
-  font-size : 2vw;
+  font-size : 25px;
   color: #201F1F;
   font-weight: 400;
   margin:0;
   padding-bottom:  3vh;
   background-color: rgba(255, 255, 255, 0.7);
 }
-.fixedheader{/* La barre du menu sur la page d'accueil*/
+.topnav{/* La barre du menu sur la page d'accueil*/
   max-width : 100vw;
+  overflow: hidden;
   background-color: #201F1F;
-  width:100%;
-  z-index: 99;
-  transition: 0.4s;
-  position: absolute;
-  top:0;
-  padding: 1vh 1vw 1vh 1vw;
-  white-space: nowrap;
+  padding: 10px;
 }
-.header{/* La barre du menu sur les autres pages*/
-  max-width : 100vw;
-  background-color: #201F1F;
-  width:100%;
-  z-index: 99;
-  transition: 0.4s;
-  position: relative;
-  top:0;
-  padding: 1vh 1vw 1vh 1vw;
-  white-space: nowrap;
-}
-.menu { /*les liens vers endroits spécifiques de la page*/
+.topnav a { /*les liens vers endroits spécifiques de la page*/
   float: left;
-  font-size : 2vw;
+  display: block;
   color: #E6E6E6;
-  font-style : italic;
-	text-decoration: none;
   text-align: center;
-  padding: 1.5vw;
-  font-family:serif;
+  padding: 20px 15px;
+  text-decoration: none;
+  font-style : italic;
+  font-size: 1.5625rem; /* 25px */
+  font-family:"Champagne";
 }
-.menu:hover{
+.topnav .icon {
+  display: none;
+}
+.topnav img{
+  height:20px;
+  width:auto;
+  filter: invert(1);
+}
+.topnav a:hover{
   color: #0074A1;
 }
 #biglogo{/*Le logo dans la barre du menu*/
   font-family:"Calligraphy";
-  color: #E6E6E6;
-  font-size : 5vw;
-  font-weight: 400;
-  float: left;
-  padding: 0;
-  padding-left: 1.5vw;
-  padding-right: 1.5vw;
-  text-align: center;
-  margin-left: 1.5vw;
-  text-decoration: none;
+  font-size: 4.375rem;/*70px*/
+  padding: 0 50px 0 50px;
 }
-#biglogo:hover{
-  color: #0074A1;
-}
-.rightheader{ /*hors catégorie d'art*/
+#rightheader{ /*hors catégorie d'art*/
   float:right;
-  margin-right: 1.5vw;
 }
-.réseaux{/*logo des réseaux sociaux*/
-  text-align: center;
-  padding-top:  2vh;
-  padding-bottom: 2vh;
+/*** Ajuster la barre de navigation à la taille de l'écran ***/
+@media screen and (max-width: 900px) {/* Tablette */
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav .icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    top:0;
+    right:0;
+    margin: 20px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 10px 50px;
+  }
+  #rightheader{
+    float:left;
+  }
 }
-.logo{/*logo des réseaux sociaux*/
-  width: 2vw;
-  height: auto;}
+@media screen and (max-width: 400px) {/* Smartphone */
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav .icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    top:0;
+    right:0;
+    margin: 20px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 10px 50px;
+    font-size: 1.25rem;/*20px*/
+  }
+  #rightheader{
+    float:left;
+  }
+  #biglogo{
+    font-size: 3.125rem;/*50px*/
+  }
+}
 
 /******************** Catégories principales ********************/
 hr{/*trait horizontal bleu*/
   background-color : #0074A1;
-  width: 9vw;
-  height: 0.4vw;
-  max-height: 5px;
   content: "";
   border: none;
-  margin-left: 0;
+  margin:0;
+  margin-top: 10px;
   align-items: left;
   padding: 0;
 }
 h3{/*Tritre des catégories principales */
   text-align: left;
   font-family:"Champagne";
-  font-size : 4vw;
   color: white;
   font-weight: 400;
   margin:0;
@@ -204,7 +316,6 @@ h4 { /* titre des sous catégories*/
   text-align: center;
   font-family:"Champagne";
   font-weight: 400;
-  font-size : 2vw;
   padding:0;
   margin-left: 2vw;
   margin-right: 2vw;
@@ -220,10 +331,10 @@ h4 { /* titre des sous catégories*/
 }
 
 /******************** Sous catégories - Aquarelle  ********************/
-.aqurelleMennu{ /*barre de menu des sous catégories Aquarelle*/
+.aqurelleMenu{ /*barre de menu des sous catégories Aquarelle*/
   white-space: nowrap;
 }
-.aqurelleMennu button {/*pour que le menue des sous catégorie soit sur une ligne*/
+.aqurelleMenu button {/*pour que le menue des sous catégorie soit sur une ligne*/
   display:inline-table;
   background-color: inherit;
   transition: 0.3s;
@@ -234,11 +345,10 @@ h4 { /* titre des sous catégories*/
 .aqurelleLinks:hover { /* Affichage du boutton au passage de la souris */
   background-color: #555555;
 }
-.aqurelleMennu button.active,  .aqurelleMennu button.active h4{ /* Affichage du boutton activé */
+.aqurelleMenu button.active,  .aqurelleMenu button.active h4{ /* Affichage du boutton activé */
   background-color: #fff;
   color: black;}
-
-#contenuAnimaux,#contenuMini,#contenuBébé,#contenuDivers,#contenuCartes, #contenuTableaux{/*Contenu des sous catégories*/
+.contenuAnimaux,#contenuMini,#contenuBébé,#contenuDivers,#contenuCartes, #contenuTableaux{/*Contenu des sous catégories*/
   display : none;
   height:auto;
   text-align: center;
@@ -268,7 +378,6 @@ h4 { /* titre des sous catégories*/
 .aquarellephotos figcaption {/*Le nom des photos*/
   background-color: rgba(18, 21, 29, 0.85);
   color: #fff;
-  font-size: 100%;
   font-family: 'Champagne';
 	font-weight: 400;
   padding: 0.7em;
@@ -290,10 +399,49 @@ figure { /*Encadrement des photos*/
   background-color: #201F1F;
   text-align: left;
   font-family:"Champagne";
-  font-size : 1.7vw;
   padding: 0;
   margin: 3vw;
   z-index:4;
+}
+
+/*** Ajuster la barre de navigation à la taille de l'écran ***/
+.menu_icon{
+  display: none;
+  height:20px;
+  width:auto;
+  filter: invert(1);
+}
+@media screen and (max-width: 1100px) {/* Tablette & smartphone */
+  .aqurelleMenu button:not(:first-child) {
+    display: none;
+  }
+  .aqurelleMenu h4{
+    text-align: left;
+  }
+  .aqurelleMenu .menu_icon {
+    float: right;
+    display: block;
+  }
+  .aqurelleMenu.responsive {
+    position: relative;
+  }
+  .aqurelleMenu.responsive .menu_icon {
+    position: absolute;
+    top:0;
+    right:0;
+  }
+  .aqurelleMenu.responsive button{
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 10px 50px;
+  }
+  #menuDeroulant button{
+    width:100%;
+  }
+  .categoriesContent{
+    margin-top: 20px;
+  }
 }
 
 /**** Spécifique à la sous catégorie Animaux ****/
@@ -383,7 +531,6 @@ figure { /*Encadrement des photos*/
 .miniAquarelle figcaption {/*Le nom des photos*/
   background-color: #201F1F;
   color: #fff;
-  font-size: 100%;
   font-family: 'Champagne';
 	font-weight: 400;
   padding: 0.7em;
@@ -395,7 +542,6 @@ figure { /*Encadrement des photos*/
   background-color: rgba(18, 21, 29, 0.8);
   color: #fff;
   transition: .5s ease;
-  font-size: 15px;
   font-family: 'Champagne';
 	font-weight: 400;
   bottom: 0px;
@@ -488,11 +634,10 @@ figure { /*Encadrement des photos*/
 }
 .cartesAquarelle #title{
   color: #fff;
-  font-size: 1.8vw;
   font-family: 'Champagne';
   font-weight: 400;
   padding: 2px;
-  text-align: left;
+  text-align: center;
   position:relative;
   padding-left: 10px;
 }
@@ -519,7 +664,6 @@ figure { /*Encadrement des photos*/
 .tableauxAquarelle figcaption {/*Le nom des photos*/
   background-color: #201F1F;
   color: #fff;
-  font-size: 100%;
   font-family: 'Champagne';
 	font-weight: 400;
   padding: 0.7em;
@@ -559,7 +703,6 @@ figure { /*Encadrement des photos*/
 }
 .diversAquarelle #title{
   color: #fff;
-  font-size: 1.8vw;
   font-family: 'Champagne';
   font-weight: 400;
   padding: 2px;
@@ -589,13 +732,9 @@ figure { /*Encadrement des photos*/
   max-width: 40vw;
   height: auto;
 }
-.crayonGalerie figcaption {/*Le nom des photos*/
-    color: #fff;
-    font-size: 1.7vw;
-    font-family: 'Champagne';
-  	font-weight: 400;
-    padding: 2px;
-    text-align: left;
+.crayonGalerie h4 {/*Le nom des photos*/
+  padding: 2px;
+  margin: 0;
 }
 .hr{ /*Trait décoatif après le nom */
   align-items: center;/* centre verticalement */
@@ -603,10 +742,20 @@ figure { /*Encadrement des photos*/
   text-align: center;
 }
 .hr::after {/*Trait décoatif après le nom*/
-  border-top: 0.3vw solid #0074A1;
+  border-top: 4px solid #0074A1;
   content: "";/* nécessaire pour afficher les pseudo-éléments */
   flex: 1;/* partage le reste de la largeur disponible */
   margin-left: 10px;/* espace les traits du texte */
+}
+@media screen and (max-width: 900px){/* Tablette */
+  .hr::after {
+    border-top: 3px solid #0074A1;
+  }
+}
+@media screen and (max-width: 400px){/* Smartphone */
+  .hr::after {
+    border-top: 2px solid #0074A1;
+  }
 }
 
 /******************** Sous catégories - Encre  ********************/
@@ -632,8 +781,7 @@ figure { /*Encadrement des photos*/
   display: block;
   background-image: linear-gradient(90deg, #0074A1, transparent);
   border: 0;
-  max-height: 3px;
-  min-height: 1.5px;
+  height: 3px;
   content: "";/* nécessaire pour afficher les pseudo-éléments */
   margin-left: 20px;
   flex:1; /*A côté du titre*/
@@ -658,10 +806,9 @@ figure { /*Encadrement des photos*/
   margin :1vh 2vw 1vh 2vw;
   padding: 0;
 }
-.encreGalerie figcaption {/*Le nom des photos*/
+.encreGalerie h5 {/*Le nom des photos*/
   background-color: inherit;
   color: #fff;
-  font-size: 1.5vw;
   font-family: 'Serif';
 	font-weight: 400;
   padding: 0.7em;
@@ -680,6 +827,40 @@ figure { /*Encadrement des photos*/
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+/* Ajuster à la taille de l'écran */
+@media screen and (max-width: 900px){/* Tablette */
+  .encreGalerie{
+    white-space: normal;
+  }
+  .encreGalerie figure{
+    align-items: center;
+  }
+  .encreGalerie .horizontale img{
+    width : 250px;
+  }
+  .encreGalerie .verticale img{
+    width : 250px;
+  }
+}
+@media screen and (max-width: 400px){/*Smartphone */
+  .encreGalerie .column {
+    display:contents;
+  }
+  .encreGalerie .row {
+    display:contents;
+  }
+  .encreGalerie figure{
+    margin:0;
+    padding: 0;
+    align-items: center;
+  }
+  .encreGalerie .horizontale img{
+    width : 80vw;
+  }
+  .encreGalerie .verticale img{
+    width : 80vw;
+  }
 }
 
 /******************** Sous catégories - Stylo  ********************/
@@ -708,7 +889,6 @@ figure { /*Encadrement des photos*/
     background-color: rgba(18, 21, 29, 0.85);
     color: #fff;
     transition: .5s ease;
-    font-size: 2vw;
     font-family: 'Champagne';
   	font-weight: 400;
     bottom: 0;
@@ -718,9 +898,6 @@ figure { /*Encadrement des photos*/
     padding-top: 50%;
     text-align: center;
     opacity:0; /*caché*/
-}
-.styloGalerie figcaption p{
-  font-size: 1.5vw;
 }
 .styloGalerie figure:hover figcaption { /*affichage du nom de l'image au passage de la souris*/
   opacity: 1;
@@ -736,8 +913,7 @@ figure { /*Encadrement des photos*/
   display: block;
   background-image: linear-gradient(90deg, #0074A1, transparent);
   border: 0;
-  height: 0.4vw;
-  max-height: 5px;
+  height: 3px;
   content: "";/* nécessaire pour afficher les pseudo-éléments */
   margin-left: 20px;
   flex:1; /*A côté du titre*/
@@ -779,8 +955,7 @@ figure { /*Encadrement des photos*/
   display: block;
   background-image: linear-gradient(90deg, #0074A1, transparent);
   border: 0;
-  height: 0.4vw;
-  max-height: 5px;
+  height: 3px;
   content: "";/* nécessaire pour afficher les pseudo-éléments */
   margin-left: 20px;
   flex:1; /*A côté du titre*/
@@ -789,13 +964,11 @@ figure { /*Encadrement des photos*/
   display: block;
   background-image: linear-gradient(90deg, transparent, #0074A1);
   border: 0;
-  height: 0.4vw;
-  max-height: 5px;
+  height: 3px;
   content: "";/* nécessaire pour afficher les pseudo-éléments */
   margin-right:20px;
   flex:1; /*A côté du titre*/
 }
-
 .Coktails img, .vin img{
   max-width : 30vw;
   max-height: 40vh;
@@ -835,7 +1008,6 @@ h5 { /* titre des sous catégories*/
   text-align: center;
   font-family:"Homework";
   font-weight: 400;
-  font-size : 4vw;
   padding-top:3vh;
   padding-bottom: 2vh;
   color: white;
@@ -844,7 +1016,6 @@ h5 { /* titre des sous catégories*/
 .maPrésentation{
   font-family:"Champagne";
   text-align: justify;
-  font-size : 2vw;
   padding-right: 3vw;
   padding-left: 3vw;
   padding-top: 2vh;
@@ -858,14 +1029,13 @@ h6 { /* titre des sous catégories*/
   text-align: center;
   font-family:"stay";
   font-weight: 400;
-  font-size : 3.5vw;
   color: white;
   padding-bottom: 2vh;
   margin-bottom: 0;
   margin-top:2vw;
 }
 .photoProfile img{
-  width:15vw;
+  width:200px;
   margin-right : 2vw;
   margin-bottom : 0;
   float : left;
@@ -877,7 +1047,7 @@ h6 { /* titre des sous catégories*/
   margin-bottom : 0;
 }
 .maPrésentation figure img{
-  width:30vw;
+  width:350px;
 }
 .maPrésentation figure img:hover { /*passage souris*/
   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 2px 15px 0 rgba(0, 0, 0, 0.7);
@@ -886,7 +1056,6 @@ h6 { /* titre des sous catégories*/
 .maPrésentation figcaption{
   background-color: rgba(32, 31, 31, 0.7);
   color: #fff;
-  font-size: 100%;
   font-family: 'Champagne';
   font-weight: 400;
   padding: 0.7em;
@@ -902,6 +1071,23 @@ h6 { /* titre des sous catégories*/
 	text-decoration: none;
 }
 
+@media screen and (max-width: 900px){/*Tablette*/
+  .photoProfile img{
+    width:180px;
+  }
+  .maPrésentation figure img{
+    width:300px;
+  }
+}
+@media screen and (max-width: 400px){/*Smartphone*/
+  .photoProfile img{
+    width:150px;
+  }
+  .maPrésentation figure img{
+    width:250px;
+  }
+}
+
 /******************** Bas de page ********************/
 footer{
   text-align: center;
@@ -913,20 +1099,17 @@ footer{
 }
 .merci{
   text-align: center;
-  font-size : 1.5vw;
   padding: 0;
   margin: 0;
 }
 .echange{
   font-family: "stay";
   text-align: center;
-  font-size : 1.8vw;
   padding: 0;
   margin: 2vh;
 }
 .commande{
   text-align: center;
-  font-size : 1.5vw;
   padding: 0;
   margin: 1vh;
 }
@@ -935,8 +1118,6 @@ footer{
   margin: 0;
 }
 .footerlogo{
-  width: 2vw;
-  height: auto;
   opacity: 0.5;
   margin:1vw;
   cursor: pointer;
@@ -958,7 +1139,6 @@ footer button, footer button:active, footer button:focus{
 }
 .footer{
   text-align: center;
-  font-size : 1.5vw;
   font-style : italic;
   padding: 0;
   margin: 2vw;
