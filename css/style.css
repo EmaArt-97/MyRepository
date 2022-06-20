@@ -569,12 +569,22 @@ figure { /*Encadrement des photos*/
   background-color: #63B4B7;
   text-align: center;
 }
-.bébéHippo img{
+.bébéElephant{
+  margin: 10px;
+  background-color: #de7443;
+  text-align: center;
+}
+.bébéPoulpe{
+  margin: 10px;
+  background-color: #a781b8;
+  text-align: center;
+}
+.bébéHippo .bébéElephant .bébéPoulpe img{
   max-height:70vh;
   max-width: 80vw;
   height : auto;
 }
-.bébéHippo figcaption{
+.bébéHippo .bébéElephant .bébéPoulpe figcaption{
   padding:15px 5px 10px 5px;
   color:black;
   font-family:"Homework";
