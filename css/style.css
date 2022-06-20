@@ -655,6 +655,41 @@ figure { /*Encadrement des photos*/
   height: 40vh;
 }
 
+/**** Spécifique à la sous catégorie Marque Page ****/
+.marquePageAquarelle{
+  background-color: white;
+  text-align: center;
+  margin:0;
+  overflow-x: auto;
+}
+.marquePagePhoto{
+  max-width: 90vw;
+}
+#marquePagePhotos{
+  background-color: #201F1F;
+  margin: 30px;
+  padding: 10px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 2px 15px 0 rgba(0, 0, 0, 0.7);
+}
+.marquePageAquarelle{
+  overflow-x: auto;
+}
+.marquePageAquarelle img{
+  max-height: 40vh;
+  max-width : 60vw;
+  height: auto;
+  padding: 10px;
+}
+.marquePageAquarelle #title{
+  color: #fff;
+  font-family: 'Champagne';
+  font-weight: 400;
+  padding: 2px;
+  text-align: center;
+  position:relative;
+  padding-left: 10px;
+}
+
 /**** Spécifique à la sous catégorie tableaux ****/
 .tableauxAquarelle {
   padding: 10px;
