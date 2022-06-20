@@ -579,7 +579,7 @@ figure { /*Encadrement des photos*/
   background-color: #a781b8;
   text-align: center;
 }
-.bébéHippo .bébéElephant .bébéPoulpe img{
+.bébéHippo img .bébéElephant img .bébéPoulpe img{
   max-height:70vh;
   max-width: 80vw;
   height : auto;
@@ -663,7 +663,7 @@ figure { /*Encadrement des photos*/
   overflow-x: auto;
 }
 .marquePagePhoto{
-  max-width: 90vw;
+  max-width: 110vw;
 }
 #marquePagePhotos{
   background-color: #201F1F;
